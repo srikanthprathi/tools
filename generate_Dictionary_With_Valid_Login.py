@@ -34,11 +34,15 @@ new_Password_File = open("new_Password_Dictionary.txt", "w+")
 for line in username_Line:
         new_Username_File.write(valid_Username)
         new_Username_File.write(line)
-new_Username_File.close()
 
 for line in password_Line:
         new_Password_File.write(valid_Password + "\n")
         new_Password_File.write(line)
+
+#Closing the Files
+username_File.close()
+password_File.close()
+new_Username_File.close()
 new_Password_File.close()
 
 print("new_Dictionary_Username.txt and new_Dictionary_Password.txt got created in the current directory")
